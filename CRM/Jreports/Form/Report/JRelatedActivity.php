@@ -60,6 +60,9 @@ class CRM_Jreports_Form_Report_JRelatedActivity extends CRM_Jreports_Form_Report
           'activity_date_time' => array(
             'title' => E::ts('Date/Time'),
             'default' => TRUE,
+            // Specifiy type = "TWELVE" so that templates/CRM/Form/Report/Layout/Table.tpl
+            // will auto-format with {$value|crmDate}
+            'type' => CRM_Utils_Type::TWELVE,
           ),
           'activity_type_id' => array(
             'title' => E::ts('Activity Type'),
